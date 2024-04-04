@@ -1,0 +1,93 @@
+/* Navigation.module.css */
+
+@import "../../vars.css";
+
+.navbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 61px;
+  z-index: 2;
+  margin: 0 10%;
+}
+
+.title {
+  font-size: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-text);
+  font-family: var(--font-robot);
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.menuBtn {
+  display: none;
+}
+
+.menu {
+  display: flex;
+}
+
+.menuItems {
+  display: flex;
+  gap: 47px;
+  list-style: none;
+}
+
+.menuItems a {
+  font-size: 25px;
+  color: var(--color-text);
+  text-decoration: none;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+@media screen and (max-width: 830px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu {
+    position: absolute;
+    right: 0;
+    margin-right: 10%;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 11px;
+    z-index: 3;
+    opacity: 0;
+    transform: translateY(-20px); /* Move the menu up slightly */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for opacity and transform */
+    background-color: var(--color-dark);
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .menuBtn {
+    display: block;
+    cursor: pointer;
+  }
+
+  .menuItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 13px;
+  }
+
+  .menuItems a {
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color 1ms ease; /* Smooth color transition */
+  }
+
+  .menuOpen .menu {
+    opacity: 1;
+    transform: translateY(1); /* Move the menu back to its original position */
+  }
+
+  .menuItems a:hover {
+    color: var(--color-primary); /* Change to your accent color */
+  }
+}

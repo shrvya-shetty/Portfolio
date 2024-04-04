@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Ship Cargo Website",
+    "imageSrc": "projects/ship.jpg",
+    "description": "Implemented key cargo transport features across five modules using HTML, CSS, JavaScript, ASP.NET, and SQL, ensuring a robust platform.",
+    "skills": ["Asp","Sql","Html/Css"],
+    
+    "source": "https://github.com/shrvya-shetty/Ship-Cargo-Services-"
+  },
+  {
+    "title": "Covid 19 Detection",
+    "imageSrc": "projects/covid.jpg",
+    "description": "Key role in COVID-19 diagnosis tech. Implemented CNN for X-ray analysis & Flask for web app. Used Flask, ML, CNN, HTML, CSS. ",
+    "skills": ["Flask", "Python", "Sql", "ML"],
+   
+    "source": "https://github.com/shrvya-shetty/Covid-19-Detection-Chest-X-ray"
+  },
+  {
+    "title": "Ayurvedic Leaf identificaation",
+    "imageSrc": "projects/leaf.jpg",
+    "description": "Innovatively designed hybrid model for Ayurvedic leaf feature extraction achieving 99.4% accuracy. Used Flask, ML, CNN, HTML, CSS.",
+    "skills": ["Python", "ML", "Flask"],
+    
+    "source": "https://github.com/shrvya-shetty/Ayurvedic-Leaf-Recognition"
+  }
+]

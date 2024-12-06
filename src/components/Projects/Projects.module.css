@@ -1,5 +1,42 @@
 @import "../../vars.css";
 
+
+
+.viewAllButton {
+  display: inline-block;
+  padding: 12px 24px;
+  margin-top: 20px;
+  background-color:  #19376d;;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s ease;
+}
+
+.viewAllButton:hover {
+  background-color:  #19376d;;
+  transform: scale(1.1);
+}
+
+/* Add a smooth animation for the button when it first loads */
+.viewAllButton {
+  animation: fadeInButton 1s ease-in-out;
+}
+
+@keyframes fadeInButton {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .container {
   margin-top: 76px;
   color: var(--color-text);

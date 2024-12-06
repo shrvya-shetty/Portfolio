@@ -1,0 +1,108 @@
+/* Define root variables */
+:root {
+    --color-text: #afff;
+    --color-primary: #080808;
+    --color-secondary: #19376d;
+    --color-dark: #0b2447;
+    --color-bg: #0a0a0a;
+    --font-robot: "Roboto", sans-serif;
+  }
+  
+  /* Global section styles */
+  .certificationsContainer {
+    padding: 50px 20px;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  .heading {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--color-text);
+  }
+  
+  /* Certification cards layout */
+  .certificationsList {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  /* Single certificate card */
+  .certificateCard {
+    display: flex;
+    align-items: center;
+    background-color: var(--color-dark);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .certificateCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Certificate image */
+  .certificateImage {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-right: 20px;
+  }
+  
+  /* Certificate content */
+  .certificateContent {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .certificateTitle {
+    font-size: 24px;
+    color: var(--color-text);
+    margin-bottom: 10px;
+  }
+  
+  .certificateDescription {
+    font-size: 16px;
+    color: var(--color-text);
+    line-height: 1.5;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .certificateCard {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .certificateImage {
+      margin-right: 0;
+      margin-bottom: 15px;
+    }
+  }
+  /* Know More Button */
+.knowMoreButton {
+    /* display: inline-block; */
+    padding: 10px 20px;
+    width:fit-content;
+    background-color:antiquewhite;
+    color:#0a0a0a;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .knowMoreButton:hover {
+    background-color:aqua;
+    transform: scale(1.05);
+  }

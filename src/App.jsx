@@ -7,6 +7,8 @@ import { Navbar } from "./components/Navbar/Navbar"
 import { Projects } from "./components/Projects/Projects"
 import { Education } from "./components/Education/Education"
 import { Works } from "./components/Works/Works"
+import { Achievements } from "./components/Achivements/Achivements"
+import { Certifications } from "./components/Certification/Certification"
 
 
 
@@ -14,15 +16,18 @@ function App() {
   return (
     <div className={styles.App}>
       <Navbar />
-      
+
       <Hero />
-      <Education />
-      <About />
+       <About />
+
+       <Education />
       
       <Experience />
       <Works />
       <Projects />
-      <Contact />
+      <Achievements/>
+      <Certifications/>
+      <Contact />  
     </div>
   );
 }

@@ -9,7 +9,7 @@ export const Hero = () => {
       <div className={styles.content}>
         <h1 className={styles.title}>Hi, I'm Shravya</h1>
         <p className={styles.description}>
-        Passionate individual eager to embark on dynamic projects and contribute to groundbreaking initiatives. Reach out if you'd like to learn more!
+        Passionate web developer with a keen eye for design and a strong foundation in building dynamic, user-friendly applications. Excited to collaborate on innovative projects and bring creative ideas to life. Let’s connect and create something extraordinary!
         </p>
         <div>
         <a href="mailto:shravyashetty159@gmail.com" className={styles.contactBtn}>

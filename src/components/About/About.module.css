@@ -2,9 +2,8 @@
   position: relative;
   background-color: rgba(27, 24, 68, 0.6);
   border-radius: 15px;
-  padding: 73px;
-  margin-top: 129px;
-  z-index: 1;
+  padding: 50px; /* Adjusted for consistency */
+  margin-top: 100px;
   margin-left: 10%;
   margin-right: 10%;
   animation: fadeIn 1s ease forwards;
@@ -27,69 +26,31 @@
   font-weight: 700;
   letter-spacing: 1.75px;
   text-transform: uppercase;
-  animation: fadeInTitle 1s ease forwards;
-}
-
-@keyframes fadeInTitle {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  text-align: center; /* Center-align for mobile */
+  margin-bottom: 30px;
 }
 
 .content {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
+  gap: 20px; /* Add gap between image and content */
   animation: slideIn 1s ease forwards;
 }
 
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
 .aboutImage {
-  width: 35%;
+  width: 30%;
+  max-width: 250px;
+  border-radius: 15px;
   animation: scaleIn 1s ease forwards;
-}
-
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.5);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
 }
 
 .aboutItems {
   color: var(--color-text);
   display: flex;
   flex-direction: column;
-  gap: 60px;
-  animation: fadeInItems 1s ease forwards;
-}
-
-@keyframes fadeInItems {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  gap: 40px;
 }
 
 .aboutItem {
@@ -97,8 +58,7 @@
   flex-direction: row;
   align-items: center;
   border-radius: 20px;
-  list-style: none;
-  padding: 25px;
+  padding: 20px;
   background-image: linear-gradient(
     90deg,
     rgba(165, 215, 232, 0.42) 0%,
@@ -114,53 +74,62 @@
   animation: pulseBackground 0.5s ease infinite alternate;
 }
 
-@keyframes pulseBackground {
-  to {
-    background-size: 110% 100%;
-  }
-}
-
 .aboutItem h3 {
-  font-size: 25px;
+  font-size: 20px; /* Adjusted for better readability */
   font-weight: 600;
-  animation: fadeInText 0.5s ease forwards;
-}
-
-@keyframes fadeInText {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+  margin-bottom: 10px;
 }
 
 .aboutItem p {
-  font-size: 25px;
-  animation: fadeInText 0.5s ease forwards;
+  font-size: 18px; /* Adjusted for mobile readability */
+}
+
+.aboutItem img {
+  margin-right: 15px; /* Add spacing between icon and text */
+  width: 40px; /* Icon size */
+  height: 40px;
 }
 
 @media screen and (max-width: 830px) {
   .container {
-    background-color: transparent;
-    padding-left: 0;
-    padding-right: 0;
+    margin-left: 5%; /* Reduce margins for small screens */
+    margin-right: 5%;
+    width:90%;
+    padding: 30px; /* Reduce padding */
   }
 
   .content {
-    flex-direction: column;
+    flex-direction: column; /* Stack content vertically */
+    text-align: center; /* Center-align text */
   }
 
   .aboutImage {
-    display: none;
+    width: 100%;
+    max-width: 200px; /* Limit size on mobile */
+    margin: 0 auto 20px; /* Center and add spacing below */
   }
 
   .aboutItems {
-    margin-top: 29px;
+    gap: 20px; /* Reduce gap for mobile */
   }
 
   .aboutItem {
-    padding-left: 0;
-    padding-right: 0;
+    flex-direction: column; /* Stack icon and text vertically */
+    text-align: center; /* Center text */
+    padding: 15px; /* Adjust padding for mobile */
+  }
+
+  .aboutItem img {
+    margin: 0 0 10px; /* Add spacing below icon */
+    width: 50px; /* Slightly increase size for clarity */
+    height: 50px;
+  }
+
+  .aboutItem h3 {
+    font-size: 18px;
+  }
+
+  .aboutItem p {
+    font-size: 16px;
   }
 }

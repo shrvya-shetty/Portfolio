@@ -16,58 +16,27 @@
   letter-spacing: 1.75px;
   text-transform: uppercase;
   animation: fadeInTitle 1s ease forwards;
+  text-align: center;
 }
 
 .content {
   display: flex;
+  flex-direction: column;
+  gap: 40px; /* Space between work items */
   justify-content: center;
-  flex-wrap: wrap;
+  align-items: center;
 }
 
 .workItem {
-  position: relative; /* Add position relative */
-  margin: 0 20px 40px;
-  padding: 30px;
+  position: relative;
+  padding: 20px;
   background-color: #080808;
   border-radius: 20px;
   box-shadow: 0 10px 20px rgba(224, 12, 171, 0.1);
   transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
-  width: 800px; /* Maximum width for responsiveness */
-  animation: fadeInUp 2s ease-in-out;
-  transform-style: preserve-3d; /* Specify the transform style */
-}
-
-.workItem:before {
-  content: '';
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
-  border: 2px solid #0e0d0d;
-  border-radius: 22px; /* Adjust border radius to match the parent */
-  opacity: 0;
-  animation: borderAnimation 1s ease forwards;
-}
-
-@keyframes borderAnimation {
-  0% {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.workItem:hover:before {
-  opacity: 0; /* Hide border on hover */
-}
-
-.workItem:hover {
-  transform: translateY(-5px) perspective(1000px) rotateX(5deg); /* Adjust the rotation for 3D effect */
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px; /* Maximum width for responsiveness */
+  animation: fadeInUp 1s ease-in-out;
 }
 
 .workItemContent {
@@ -95,7 +64,7 @@
 }
 
 .workItemContent ul {
-  margin-left: 2rem;
+  margin-left: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
@@ -103,7 +72,7 @@
   color: var(--color-text);
   font-size: 1.6rem;
   margin-bottom: 0.5rem;
-  list-style-type: square !important; /* Add list style */
+  list-style-type: square !important;
 }
 
 .workItemContent p.skills {
@@ -112,33 +81,47 @@
   color: #eb5858;
 }
 
-.workItemContent h5,
-.workItemContent h3,
-.workItemContent p,
-.workItemContent ul,
-.workItemContent p.skills {
-  opacity: 1;
-  transition: opacity 0.3s ease-in-out;
-}
-
-@keyframes slideIn {
-  from {
-    transform: translateY(-100px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
+/* Media Queries for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .workItem {
+    width: 90%; /* Adjust width for smaller screens */
   }
 }
 
-@keyframes fadeInUp {
-  from {
-    transform: translateY(50px);
-    opacity: 0;
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 28px;
   }
-  to {
-    transform: translateY(0);
-    opacity: 1;
+
+  .workItem {
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  .workItemContent h3 {
+    font-size: 1.6rem; /* Smaller title size */
+  }
+
+  .workItemContent h5 {
+    font-size: 1.2rem; /* Smaller subtitle size */
+  }
+
+  .workItemContent p,
+  .workItemContent ul li {
+    font-size: 1.2rem; /* Reduce font size for content */
+    display: none; /* Hide detailed content */
+  }
+
+  .workItemContent p.skills {
+    font-size: 1.2rem;
+    display: block; /* Only show skills */
+  }
+
+  .workItemContent h3,
+  .workItemContent h5 {
+    display: block; /* Keep the main headings visible */
+  }
+
+  .workItemContent ul {
+    display: none; /* Hide the list details */
   }
 }

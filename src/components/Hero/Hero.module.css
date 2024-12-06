@@ -1,16 +1,17 @@
-/* Hero.module.css */
-
-@import "../../vars.css";
-
 .container {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 49px;
   z-index: 1;
-  margin-left: 10%;
-  margin-right: 10%;
+  width: 100%; /* Make sure container takes full width */
+  max-width: 100%; /* Prevent container from exceeding viewport width */
+  margin-left: 0; /* Remove the left margin */
+  margin-right: 0; /* Remove the right margin */
+  padding: 0 10%; /* Optional: Add padding for spacing on the sides */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: hidden; /* Prevent horizontal scrolling */
+
 }
 
 .content {
@@ -67,20 +68,7 @@
 .heroImg {
   width: 50%;
   z-index: 1;
-  order: 1;
   animation: floating 3s ease-in-out infinite; /* Simplify animation syntax */
-}
-
-@keyframes floating {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(-0px);
-  }
 }
 
 .topBlur,
@@ -96,7 +84,6 @@
   width: 50vw;
   height: 50vw;
   min-width: 350px;
-  min-width: 350px;
   top: -128px;
   left: -10vw;
 }
@@ -105,12 +92,10 @@
   width: 70vw;
   height: 50vw;
   min-width: 350px;
-  min-width: 250px;
   top: 246px;
   right: -25vw;
 }
 
-/* Fade-in animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -120,12 +105,66 @@
   }
 }
 
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Mobile view adjustments */
 @media screen and (max-width: 830px) {
   .container {
     flex-direction: column-reverse;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    width:auto;
+    text-align: center;
   }
 
   .content {
     align-items: center;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+
+  .description {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  .contactBtn {
+    font-size: 20px;
+    padding: 12px 20px;
+    margin: 10px 0;
+  }
+
+  .heroImg {
+    width: 80%;
+    margin-top: 20px;
+  }
+
+  .topBlur {
+    width: 60vw;
+    height: 60vw;
+    top: -100px;
+    left: -20vw;
+  }
+
+  .bottomBlur {
+    width: 80vw;
+    height: 60vw;
+    top: 200px;
+    right: -30vw;
   }
 }

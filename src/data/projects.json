@@ -22,5 +22,29 @@
     "skills": ["Python", "ML", "Flask"],
     
     "source": "https://github.com/shrvya-shetty/Ayurvedic-Leaf-Recognition"
+  },
+  {
+    "title": "Deaf-Lip-Sync",
+    "imageSrc": "projects/image1.png",
+    "description": "This project involves training a machine learning model to recognize and interpret lip movements from video input and convert them into corresponding text. Used Flask, ML, CNN, HTML, CSS.",
+    "skills": ["Python", "ML", "Flask"],
+    
+    "source": "https://github.com/shrvya-shetty/Deaf-Lip-Sync"
+  },
+  {
+    "title": "Finger Tracker",
+    "imageSrc": "projects/Right.png",
+    "description": "Track the movement of the index finger in real-time using a webcam. This project utilizes OpenCV for video capture and display, and Mediapipe for hand and finger landmark detection.",
+    "skills": ["Python", "ML", "Flask"],
+    
+    "source": "https://github.com/shrvya-shetty/Finger-Tracker"
+  },
+  {
+    "title": "Snake Game",
+    "imageSrc": "projects/snake.png",
+    "description": "This is a simple implementation of the classic Snake game using Python and the Pygame library.",
+    "skills": ["Python", "ML", "Flask"],
+    
+    "source": "https://github.com/shrvya-shetty/Finger-Tracker"
   }
 ]

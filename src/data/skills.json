@@ -30,5 +30,20 @@
   {
     "title": "Python",
     "imageSrc": "skills/python.png"
+  },
+  {
+    "title": "Next.js",
+    "imageSrc": "skills/Next.js.png"
+  },
+  {
+    "title": "NumPy",
+    "imageSrc": "skills/NumPy.png"
+  },{
+    "title": "GitHub",
+    "imageSrc": "skills/GitHub Actions.png"
+  }
+  ,{
+    "title": "Flask",
+    "imageSrc": "skills/Flask.png"
   }
 ]

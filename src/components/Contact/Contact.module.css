@@ -1,27 +1,42 @@
-@import "../../vars.css";
+@import "../../vars.css"; /* Import custom variables file for color, fonts, etc. */
 
+/* Main Container Styling */
 .container {
   color: var(--color-text);
-  margin-top: 120px;
   background-color: var(--color-secondary);
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  width: 100vw;
-  padding: 58px 10%;
-  gap: 10px;
+  justify-content: space-between; /* Spread content across */
+  align-items: flex-start; /* Align items at the top */
+  padding: 40px 10%;
+  width: auto;
+  margin-top: 120px;
+  gap: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section Styling */
+.contactSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .text h2 {
-  font-size: 80px;
+  font-size: 50px;
   font-weight: 700;
-  letter-spacing: 4px;
+  text-align: left;
+  letter-spacing: 3px;
+  color: var(--color-text);
+  margin-bottom: 10px;
 }
 
 .text p {
-  font-size: 40px;
+  font-size: 20px;
   font-weight: 400;
-  letter-spacing: 2px;
+  text-align: left;
+  color: var(--color-text);
+  margin-bottom: 20px;
 }
 
 .links {
@@ -29,36 +44,113 @@
   flex-direction: column;
   align-items: flex-start;
   list-style: none;
-  gap: 26px;
+  gap: 20px;
+  padding: 0;
 }
 
 .link {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 15px;
+  font-size: 18px;
 }
 
 .link a {
   color: var(--color-text);
   text-decoration: none;
-  font-size: 30px;
-  font-weight: 400;
-  letter-spacing: 1.5px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
 }
 
-@media screen and (max-width: 830px) {
+.link a:hover {
+  color: var(--color-primary);
+}
+
+/* Icon Styling */
+.icon {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+/* Quick Links Section Styling */
+.quickLinksSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.quickLinksSection h3 {
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.quickLinks {
+  list-style: none;
+  padding: 0;
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.quickLinks li a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.quickLinks li a:hover {
+  color: var(--color-primary);
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
   .container {
     flex-direction: column;
-    gap: 23px;
+    padding: 30px 5%;
   }
 
-  .text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .contactSection {
+    width: 100%;
+  }
+
+  .quickLinksSection {
+    width: 100%;
+  }
+
+  .text h2 {
+    font-size: 40px;
+  }
+
+  .text p {
+    font-size: 18px;
   }
 
   .links {
-    align-items: center;
+    gap: 15px;
+  }
+
+  .link {
+    font-size: 16px;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .quickLinks li a {
+    font-size: 16px;
   }
 }

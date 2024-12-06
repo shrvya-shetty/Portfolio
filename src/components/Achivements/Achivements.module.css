@@ -1,0 +1,137 @@
+/* Define CSS variables */
+:root {
+    --color-text: #afff;
+    --color-primary: #080808;
+    --color-secondary: #19376d;
+    --color-dark: #0b2447;
+    --color-bg: #0a0a0a;
+    --font-robot: "Roboto", sans-serif;
+  }
+  
+  /* Global Styles */
+  body {
+    font-family: var(--font-robot);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Achievements Container */
+  .achievementsContainer {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+  }
+  
+  /* Creative wrapper for the section */
+  .achievementsWrapper {
+    width: 100%;
+    max-width: 1200px;
+    background: var(--color-dark);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    margin: 0 auto;
+    border: 5px solid var(--color-secondary);
+  }
+  
+  .achievementsWrapper::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--color-primary);
+    opacity: 0.1;
+    z-index: -1;
+  }
+  
+  /* Section Title */
+  .title {
+    text-align: center;
+    font-size: 36px;
+    color: var(--color-text);
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+  
+  /* Content Layout */
+  .achievementsContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  /* Left side (boxes) */
+  .achievementsList {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 60%;
+  }
+  
+  .achievement {
+    background-color: var(--color-secondary);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s, transform 0.5s;
+  }
+  
+  .achievement.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Achievement Titles and Descriptions */
+  .achievementTitle {
+    font-size: 24px;
+    color: var(--color-text);
+    margin-bottom: 10px;
+  }
+  
+  .achievementDescription {
+    font-size: 18px;
+    color: var(--color-text);
+    line-height: 1.6;
+  }
+  
+  /* Right side (photo) */
+  .photoContainer {
+    width: 30%;
+  }
+  
+  .photo {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Animation for box appearing */
+  @media (max-width: 768px) {
+    .achievementsContent {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .achievementsList {
+      width: 100%;
+    }
+  
+    .photoContainer {
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+  

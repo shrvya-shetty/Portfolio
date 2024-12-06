@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./Works.module.css"; // Import the CSS module for styling
+import styles from "./Works.module.css";
 
 export const Works = () => {
   return (
@@ -7,6 +7,26 @@ export const Works = () => {
       <h2 className={styles.title}>Work Experience</h2>
       <br></br>
       <div className={styles.content}>
+        
+        {/* New Work Experience */}
+        <div className={styles.workItem}>
+          <div className={styles.workItemContent}>
+            <h5>September 2024 - Present</h5>
+            <h3>Web Developer</h3>
+            <p>AgPotato Trading Pvt. Ltd.</p>
+            <ul>
+              <li>Designed and developed the company website to facilitate efficient trading of potatoes.</li>
+              <li>Implemented a responsive and user-friendly interface using React.js and Tailwind CSS.</li>
+              <li>Optimized the backend system with Node.js to handle real-time data transactions.</li>
+              <li>Deployed the website on a cloud platform ensuring scalability and high availability.</li>
+            </ul>
+            <p className={styles.skills}>
+              Skills: React.js, Tailwind CSS, Node.js, Cloud Deployment, Full-Stack Development
+            </p>
+          </div>
+        </div>
+
+        
         <div className={styles.workItem}>
           <div className={styles.workItemContent}>
             <h5>Jan 2024 - Feb 2024</h5>
@@ -17,13 +37,12 @@ export const Works = () => {
               <li>HTML/CSS for frontend, Flask for backend: process HTTP requests, compute entropy, handle data packets.</li>
               <li>Managed a relational database schema for storing DDoS attack data and accuracy testing results.</li>
             </ul>
-            <p className={styles.skills}>Skills: MySQL, Flask, DDoS, HTML, CSS, Machine Learning, Entropy, HTTP, Web Application</p>
+            <p className={styles.skills}>
+              Skills: MySQL, Flask, DDoS, HTML, CSS, Machine Learning, Entropy, HTTP, Web Application
+            </p>
           </div>
         </div>
-        {/* Add more work experience cards as needed */}
-        
-        
-        {/* Add more work experience cards as needed */}
+
       </div>
     </section>
   );

@@ -1,15 +1,14 @@
-/* Navigation.module.css */
-
-@import "../../vars.css";
+@import "../../vars.css"; /* Import your shared variables */
 
 .navbar {
   position: relative;
   display: flex;
+  width:auto;
   align-items: center;
   justify-content: space-between;
-  padding-top: 61px;
+  padding: 20px 10%; /* Adjust padding for better spacing */
   z-index: 2;
-  margin: 0 10%;
+  background-color: var(--color-dark); /* Adjust as needed */
 }
 
 .title {
@@ -22,72 +21,99 @@
 }
 
 .menuBtn {
-  display: none;
+  display: none; /* Hidden by default, shown on mobile */
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1; /* Ensure it stays on top */
+  width: 40px;
+  height: 40px;
+}
+
+.menuBtn img {
+  width: 100%;
+  height: 100%;
 }
 
 .menu {
   display: flex;
-}
-
-.menuItems {
-  display: flex;
-  gap: 47px;
   list-style: none;
+  gap: 30px;
 }
 
 .menuItems a {
-  font-size: 25px;
+  font-size: 20px;
   color: var(--color-text);
   text-decoration: none;
   transition: color 0.3s ease; /* Smooth color transition */
 }
 
+.menuItems a:hover {
+  color: var(--color-primary); /* Highlight on hover */
+}
+
+.itemvalue {
+  color: var(--color-text);
+  font-size: 20px;
+  font-weight: 600;
+  /* font-family: var(--font-robot), sans-serif; Apply a modern font */
+  /* font-size: 28px; /* Adjust the size for navigation items */
+  /* font-weight: 500; Semi-bold for better readability */ 
+  text-decoration: none; /* Ensure no underline */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Hover Effect */
+.itemvalue:hover {
+  color:white; /* Use an accent color for hover effect */
+}
+
+/* Mobile View Adjustments */
 @media screen and (max-width: 830px) {
   .navbar {
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  .menu {
-    position: absolute;
-    right: 0;
-    margin-right: 10%;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 11px;
-    z-index: 3;
-    opacity: 0;
-    transform: translateY(-20px); /* Move the menu up slightly */
-    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for opacity and transform */
-    background-color: var(--color-dark);
-    padding: 20px;
-    border-radius: 10px;
+    width: auto;
   }
 
   .menuBtn {
     display: block;
-    cursor: pointer;
+    top:20px; /* Show the menu button on mobile */
+  }
+
+  .menu {
+    position: absolute;
+    top: 90px;
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: var(--color-dark);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    gap: 15px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .menuOpen {
+    display: flex; /* Show the menu when open */
+    opacity: 1;
+    top:100px;
+    transform: translateY(0);
+
   }
 
   .menuItems {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 13px;
+    align-items: flex-end;
+    gap: 15px;
   }
 
   .menuItems a {
-    color: var(--color-text);
-    text-decoration: none;
-    transition: color 1ms ease; /* Smooth color transition */
-  }
-
-  .menuOpen .menu {
-    opacity: 1;
-    transform: translateY(1); /* Move the menu back to its original position */
-  }
-
-  .menuItems a:hover {
-    color: var(--color-primary); /* Change to your accent color */
+    font-size: 18px; /* Slightly smaller font for mobile */
   }
 }

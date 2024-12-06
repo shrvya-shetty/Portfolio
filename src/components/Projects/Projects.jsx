@@ -1,7 +1,5 @@
 import React from "react";
-
 import styles from "./Projects.module.css";
-
 import projects from "../../data/projects.json";
 import { ProjectCard } from "./ProjectCard";
 
@@ -14,6 +12,15 @@ export const Projects = () => {
           return <ProjectCard key={id} project={project} />;
         })}
       </div>
+      {/* View All Button */}
+      <a
+        href="https://github.com/shrvya-shetty" // Replace this with your GitHub profile URL
+        className={styles.viewAllButton}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        View All
+      </a>
     </section>
   );
 };

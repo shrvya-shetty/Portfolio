@@ -64,6 +64,22 @@
   background-color: var(--color-secondary); /* Change color on hover */
   transform: scale(1.05); /* Scale up slightly on hover */
 }
+.contactBtn1 {
+  text-decoration: none;
+  background-color: var(--color-primary);
+  color: var(--color-text);
+  border-radius: 100px;
+  font-size: 30px;
+  font-weight: 600;
+  padding: 17px 26px;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Add smooth transition */
+}
+
+.contactBtn1:hover {
+  background-color: var(--color-secondary); /* Change color on hover */
+  transform: scale(1.05); /* Scale up slightly on hover */
+}
 
 .heroImg {
   width: 50%;
@@ -143,12 +159,34 @@
     margin-bottom: 30px;
   }
 
-  .contactBtn {
-    font-size: 20px;
-    padding: 12px 20px;
-    margin: 10px 0;
+  /* Parent container to display buttons in a row */
+  .buttonContainer {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 10px; /* Adds space between the buttons */
   }
-
+  
+  /* Button styles */
+  .contactBtn,
+  .contactBtn1 {
+    font-size: 20px;
+    padding: 10px 10px;
+    margin: 0px 0;
+    text-decoration: none;
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    border-radius: 100px;
+    font-weight: 600;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .contactBtn:hover,
+  .contactBtn1:hover {
+    background-color: var(--color-secondary);
+    transform: scale(1.05);
+  }
+  
   .heroImg {
     width: 80%;
     margin-top: 20px;

@@ -12,12 +12,15 @@ export const Hero = () => {
         Passionate web developer with a keen eye for design and a strong foundation in building dynamic, user-friendly applications. Excited to collaborate on innovative projects and bring creative ideas to life. Let’s connect and create something extraordinary!
         </p>
         <div>
+        <div className={styles.buttonContainer}>
+
         <a href="mailto:shravyashetty159@gmail.com" className={styles.contactBtn}>
           Contact Me
           </a> &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
-        <a href="https://drive.google.com/file/d/1-smK9cnSHEdXHfg3g5SrAeXnw9j6Rg9G/view?usp=sharing" className={styles.contactBtn}>
+        <a href="https://drive.google.com/file/d/1GO8mD702ZiNYQqZfmWKzBpUoBq8IH4ic/view?usp=sharing" className={styles.contactBtn1}>
           Resume
         </a>
+        </div>
         </div>
         
       </div>
